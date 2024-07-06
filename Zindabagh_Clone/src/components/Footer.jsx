@@ -6,11 +6,11 @@ import fullGlobe from "../assets/globeFooter.webp";
 
 const Footer = () => {
   return (
-    <footer className=" overflow-hidden bottom-1 p-10 h-[50vh] text-white py-8">
+    <footer className=" overflow-hidden bottom-1 p-10 h-[50vh] text-black py-8">
       <div className="container h-full mx-auto flex flex-col md:flex-row justify-between items-center">
         {/* Left Section */}
         <div className="left mb-4 md:mb-0 flex flex-col items-center md:items-start">
-          <div className="term-privacy flex space-x-4 mb-4">
+          <div className=" term-privacy flex space-x-4 mb-4">
             <p>Terms & Conditions</p>
             <p>Privacy Policy</p>
           </div>
