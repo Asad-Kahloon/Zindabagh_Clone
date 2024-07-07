@@ -1,63 +1,132 @@
 import facebookIcon from "../assets/svgexport-16.svg";
 import whatsappIcon from "../assets/svgexport-17.svg";
 import logo from "../assets/logo.svg";
-import passportGlobe from "../assets/footertopSVG.png";
 import fullGlobe from "../assets/globeFooter.webp";
 
 const Footer = () => {
   return (
-    <footer className=" overflow-hidden bottom-1 p-10 h-[50vh] text-black py-8">
-      <div className="container h-full mx-auto flex flex-col md:flex-row justify-between items-center">
-        {/* Left Section */}
-        <div className="left mb-4 md:mb-0 flex flex-col items-center md:items-start">
-          <div className=" term-privacy flex space-x-4 mb-4">
-            <p>Terms & Conditions</p>
-            <p>Privacy Policy</p>
+    <footer className="footer-container mx-auto text-footer-text-color font-medium sm:mt-5 md:mt-20 bg-footerbg bg-no-repeat bg-bottom">
+      <a
+        aria-label="zindabhag logo"
+        className="hidden md:flex flex-center w-full"
+        href="/"
+      >
+        <div className="flex justify-cener item-center flex-col">
+          <img src={logo} alt="" />
+
+          <div>
+            <p className="text-base">Head office: 3577 Harlem Road,</p>
+            <p className="text-base">Cheektowaga, NY 14225, USA</p>
           </div>
-          <div className="icons flex space-x-4">
-            <a href="#">
-              <img className="h-10" src={facebookIcon} alt="Facebook" />
+        </div>
+      </a>
+      <div className="hidden md:flex md:flex-row mt-2 justify-between mx-10">
+        <div className="md:flex flex-1 items-center ">
+          <a
+            className="mx-2 lg:mx-4 font-bold z-10"
+            href="/terms-and-condition"
+          >
+            Terms &amp; Condition
+          </a>
+          <a className="mx-2 lg:mx-4 font-bold z-10" href="/privacy-policy">
+            Privacy Policy
+          </a>
+        </div>
+        <div className="md:flex flex-1  justify-end items-center">
+          <a className="mx-2 lg:mx-4 font-bold z-10" href="/reviews">
+            Reviews
+          </a>
+          <a className="mx-2 lg:mx-4 font-bold z-10" href="/contact-us">
+            Contact Us
+          </a>
+        </div>
+      </div>
+      <div className="hidden md:flex md:justify-between mx-10">
+        <div className="flex justify-between mt-5">
+          <div className="flex flex-1 items-center z-10">
+            <a aria-label="Facebook" href="#" target="_blank">
+              <div className="mx-1 font-bold">
+                <img src={facebookIcon} className="h-[8vh]" alt="Facebook" />
+              </div>
             </a>
-            <a href="#">
-              <img className="h-10" src={whatsappIcon} alt="WhatsApp" />
+            <a
+              aria-label="WhatsApp"
+              href="https://www.whatsapp.com/channel/0029VaI4DRV0lwguNsGLFz3a"
+              target="_blank"
+            >
+              <div className="mx-1 font-bold">
+                <img src={whatsappIcon} className="h-[8vh]" alt="Whatsapp" />
+              </div>
             </a>
           </div>
         </div>
-
-        {/* Center Section */}
-        <div className="center text-center md:text-center mb-4 md:mb-0">
-          <div className="logo-image flex flex-col items-center ">
-            <img src={logo} alt="Logo" className="mx-auto md:mx-0" />
-            <p className="mt-2">
-              Head Office: 3577 Harlem Road,
-              <br />
-              Cheektowaga, NY 14225, USA
-            </p>
-          </div>
-          <div className="passport-image ">
-            <img
-              src={passportGlobe}
-              alt="passport Globe"
-              className="half-globe bottom-auto "
-            />
-          </div>
-          <div className="globe">
-            <img
-              src={fullGlobe}
-              alt="Full Globe"
-              className="full-globe size-2/3 mx-auto md:mx-0"
-            />
+        <div className="text-gray-500 mt-7">
+          <p className="text-base">Copyright © 2024 ZindaBhag</p>
+        </div>
+      </div>
+      <div className="flex justify-center items-center md:hidden flex-col bg-footerbg bg-cover bg--repeat">
+        <a href="/">
+          <img src={logo} className="mt-12 mr-4" alt="" />
+        </a>
+        <div className="flex flex-1 font-normal flex-wrap my-4">
+          <div className="flex flex-col text-center">
+            <a className="font-semibold" href="/terms-and-condition">
+              Terms &amp; Condition
+            </a>
+            <a className="font-semibold" href="/privacy-policy">
+              Privacy Policy
+            </a>
+            <a className="font-semibold" href="/reviews">
+              Reviews
+            </a>
+            <a className="font-semibold" href="/contact-us">
+              Contact Us
+            </a>
           </div>
         </div>
-
-        {/* Right Section */}
-        <div className="right flex flex-col items-center md:items-end">
-          <div className="flex space-x-4 mb-4">
-            <p>Reviews</p>
-            <p>Contact Us</p>
+        <div className="flex items-center z-10">
+          <a href="https://www.facebook.com/zindabhag01" target="_blank">
+            <div className="mx-1 font-bold">
+              <img src={facebookIcon} className="h-[10vh]" alt="Facebook" />
+            </div>
+          </a>
+          <a
+            href="https://www.whatsapp.com/channel/0029VaI4DRV0lwguNsGLFz3a"
+            target="_blank"
+          >
+            <div className="mx-1 font-bold">
+              <img src={whatsappIcon} className="h-[10vh]" alt="Whatsapp" />
+            </div>
+          </a>
+        </div>
+        <div className="flex flex-1 justify-center text-center text-gray-500 -mb-24">
+          <p className="mt-9 text-base">Copyright © 2024 ZindaBhag</p>
+        </div>
+        <div className="flex justify-center items-center">
+          <div className="w-80 h-64 overflow-hidden">
+            <div className="w-full h-full transform translate-y-1/2">
+              <img
+                alt="globe"
+                src={fullGlobe}
+                className="object-cover animate-spin-slow"
+              />
+            </div>
           </div>
-          <div className="copyright">
-            <p>&copy; Copyright 2024 Zindabhag</p>
+        </div>
+      </div>
+      <div>
+        <div className="hidden md:flex justify-center -my-44">
+          <img src={logo} alt="Footer" />
+        </div>
+        <div className="hidden md:flex justify-center">
+          <div className="w-96 h-64 ml-7 overflow-hidden">
+            <div className="w-full h-full transform translate-y-1/2">
+              <img
+                alt="globe"
+                src={fullGlobe}
+                className="object-cover animate-spin-slow"
+              />
+            </div>
           </div>
         </div>
       </div>
